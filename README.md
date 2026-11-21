@@ -78,7 +78,16 @@ Cloudflare account login is required. Free limits and terms may change. V1 publi
 
 Source repository: https://github.com/kharghwood/autonomous-ai-founder
 
-GitHub Actions runs Python checks on pushes and pull requests. The Mac-side agent can push generated MVP folders after local checks, provided this repo is cloned locally and `AUTO_GITHUB_PUSH=true`.
+GitHub Actions runs Python checks on pushes and pull requests. To let your Mac push generated MVP folders, authenticate the local Git client once after cloning:
+
+```bash
+brew install gh
+gh auth login
+gh auth setup-git
+gh auth status
+```
+
+Choose GitHub.com, HTTPS, and complete the browser sign-in. Do not paste tokens or passwords into chat. The Mac-side agent can then push generated MVP folders after local checks because this cloned repository already has the correct `origin` remote and `AUTO_GITHUB_PUSH=true`.
 
 If you already have a ZIP folder, clone the repository into a fresh folder to avoid overwriting local work:
 
