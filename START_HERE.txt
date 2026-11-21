@@ -1,0 +1,15 @@
+AUTONOMOUS AI FOUNDER — QUICK START
+
+1. Install/open Ollama: https://ollama.com/download
+2. In Terminal:
+   mkdir -p ~/Projects && cd ~/Projects
+   git clone https://github.com/kharghwood/autonomous-ai-founder.git
+   cd autonomous-ai-founder
+   chmod +x scripts/*.sh
+   ./scripts/setup_mac.sh
+3. Ensure model exists: ollama pull llama3.2:1b
+4. Start: ./scripts/run_mac.sh
+5. Open http://127.0.0.1:8765
+6. Optional: import n8n/autonomous-founder-daily.json into n8n and configure X-API-Key from .env.
+
+Read README.md for full setup. Never upload .env or private data.
